@@ -6,8 +6,8 @@
 
 using namespace std;
 
-string completaNumero(string numero){
-    if(numero.size() == 3){
+string completaNumero(string numero){ //funcao que completa o numero caso o usuario digite 
+    if(numero.size() == 3){           //um numero com menos de 4 digitos
         numero = "0" + numero;
     } else if(numero.size() == 2){
         numero = "00" + numero;
