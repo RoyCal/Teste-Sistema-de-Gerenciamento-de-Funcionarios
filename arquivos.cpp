@@ -23,7 +23,7 @@ int main(){
         arquivo.close();                            ///////////////////////////////////////////////
     }
     
-    i = 0;                              //Colocando todas as linhas do arquivo num vetor de string
+    i = 0;                              //Colocando todas as linhas do arquivo num vetor de strings
     while(getline(arquivo, linhas[i])){
         i++;
     }
