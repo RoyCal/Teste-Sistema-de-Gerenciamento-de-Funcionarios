@@ -6,6 +6,18 @@
 
 using namespace std;
 
+string completaNumero(string numero){
+    if(numero.size() == 3){
+        numero = "0" + numero;
+    } else if(numero.size() == 2){
+        numero = "00" + numero;
+    } else if(numero.size() == 1){
+        numero = "000" + numero;
+    }
+
+    return numero;
+}
+
 int main(){
     int i, j, escolha, count;
     char c;
@@ -109,16 +121,10 @@ int main(){
                             }
 
                             cout << "\nO codigo deve ter 4 digitos! Tente novamente" << endl;
-                        } else if(numero.size() == 3){
-                            numero = "0" + numero;
-                            break;
-                        } else if(numero.size() == 2){
-                            numero = "00" + numero;
-                            break;
-                        } else if(numero.size() == 1){
-                            numero = "000" + numero;
+                        } else if(numero.size() == 4){
                             break;
                         } else {
+                            numero = completaNumero(numero);
                             break;
                         }
                     }
@@ -211,7 +217,10 @@ int main(){
                 }
 
                 cout << "\nQual o codigo da pessoa a ser deletada?" << endl;
+                
                 getline(cin, numero);
+
+                numero = completaNumero(numero);    
 
                 for(i = 0; i < 100; i++){
                     if(linhas[i] != ""){
@@ -262,6 +271,8 @@ int main(){
                 cout << "\nDigite o codigo de algum funcionario:" << endl;
 
                 getline(cin, numero);
+
+                numero = completaNumero(numero);
 
                 for(i = 0; i < 100; i++){
                     if(linhas[i] != ""){
