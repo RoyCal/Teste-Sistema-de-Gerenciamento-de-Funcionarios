@@ -99,7 +99,7 @@ int main(){
                     while(1){
                         getline(cin, numero);
 
-                        if(numero.size() != 4){
+                        if(numero.size() > 4){
                             system("cls");
 
                             for(i = 0; i < 100; i++){
@@ -109,6 +109,15 @@ int main(){
                             }
 
                             cout << "\nO codigo deve ter 4 digitos! Tente novamente" << endl;
+                        } else if(numero.size() == 3){
+                            numero = "0" + numero;
+                            break;
+                        } else if(numero.size() == 2){
+                            numero = "00" + numero;
+                            break;
+                        } else if(numero.size() == 1){
+                            numero = "000" + numero;
+                            break;
                         } else {
                             break;
                         }
