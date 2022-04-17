@@ -7,7 +7,7 @@
 using namespace std;
 
 int main(){
-    int i, j, escolha, count;
+    int i, j, escolha, count;  //vai tomar no cu leo anao
     char c;
 
     Funcionario funcionario;
