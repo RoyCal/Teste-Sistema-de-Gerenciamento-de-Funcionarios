@@ -10,6 +10,8 @@ class Arquivo{
 
         void imprimeArquivo();
 
+        void stringToCode(int i);
+
         fstream arquivo;
-        string linhas[100];
+        string linhas[100], linhaAux;
 };

@@ -27,7 +27,7 @@ int main(){
 
     Arquivo arquivo;
 
-    string nome, ocupacao, linhaAux, numero;
+    string nome, ocupacao, numero;
 
     arquivo.criaArquivo();
 
@@ -99,12 +99,9 @@ int main(){
                     }
 
                     for(i = 0; i < 100; i++){
-                        if(arquivo.linhas[i] != ""){
-                            linhaAux = arquivo.linhas[i];
-                            linhaAux.erase(4, linhaAux.size());
-                        }
+                        arquivo.stringToCode(i);
 
-                        if(numero == linhaAux){  
+                        if(numero == arquivo.linhaAux){  
                             system("cls");
 
                             arquivo.imprimeArquivo();
@@ -174,12 +171,9 @@ int main(){
                 }
 
                 for(i = 0; i < 100; i++){
-                    if(arquivo.linhas[i] != ""){
-                        linhaAux = arquivo.linhas[i];
-                        linhaAux.erase(4, linhaAux.size());
-                    }
+                    arquivo.stringToCode(i);
 
-                    if(linhaAux == numero){
+                    if(arquivo.linhaAux == numero){
                         arquivo.linhas[i] = "";
 
                         arquivo.arquivo.open("funcionarios.txt", ios::out);
@@ -220,12 +214,9 @@ int main(){
                 }
 
                 for(i = 0; i < 100; i++){
-                    if(arquivo.linhas[i] != ""){
-                        linhaAux = arquivo.linhas[i];
-                        linhaAux.erase(4, linhaAux.size());
-                    }
+                    arquivo.stringToCode(i);
 
-                    if(linhaAux == numero){
+                    if(arquivo.linhaAux == numero){
                         funcionario.setCodigo(numero);
 
                         nome = arquivo.linhas[i];
@@ -246,7 +237,7 @@ int main(){
                         break;
                     }
 
-                    linhaAux = "";
+                    arquivo.linhaAux = "";
                 }
 
                 system("cls");

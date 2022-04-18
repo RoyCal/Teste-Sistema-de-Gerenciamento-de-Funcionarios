@@ -29,3 +29,10 @@ void Arquivo::criaArquivo(){
 
     arquivo.close();
 }
+
+void Arquivo::stringToCode(int i){
+    if(linhas[i] != ""){
+        linhaAux = linhas[i];
+        linhaAux.erase(4, linhaAux.size());
+    }
+}
