@@ -169,7 +169,9 @@ int main(){
                 
                 getline(cin, numero);
 
-                numero = completaNumero(numero);    
+                if(numero.size() < 4){
+                    numero = completaNumero(numero);    
+                }
 
                 for(i = 0; i < 100; i++){
                     if(arquivo.linhas[i] != ""){
@@ -213,7 +215,9 @@ int main(){
 
                 getline(cin, numero);
 
-                numero = completaNumero(numero);
+                if(numero.size() < 4){
+                    numero = completaNumero(numero);    
+                }
 
                 for(i = 0; i < 100; i++){
                     if(arquivo.linhas[i] != ""){
