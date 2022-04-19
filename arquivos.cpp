@@ -3,7 +3,6 @@
 #include <iostream>
 #include <fstream> //biblioteca de arquivos
 #include <string> //biblioteca de manipulacao de strings
-#include <cstdlib> //biblioteco do system("cls"), que limpa o console
 
 using namespace std;
 
